@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  AccountController.swift
 //  Shoppie
 //
 //  Created by Min Thet Maung on 02/06/2020.
@@ -8,13 +8,8 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class AccountController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-
-
 }
-
