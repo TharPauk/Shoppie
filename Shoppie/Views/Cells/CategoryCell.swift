@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CategoryCell: UICollectionViewCell {
+class CategoryCell: BaseCell {
     
     static let reuseIdentifier = String(describing: CategoryCell.self)
     
@@ -43,16 +43,7 @@ class CategoryCell: UICollectionViewCell {
         }
     }
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setupViews()
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    private func setupViews() {
+    override func setupViews() {
         addSubview(imageView)
         addSubview(nameLabel)
         

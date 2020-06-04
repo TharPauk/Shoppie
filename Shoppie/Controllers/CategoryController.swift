@@ -13,35 +13,39 @@ class CategoryController: UIViewController {
     private let searchBarCellId = "searchBarCellId"
     
     private var categories: [Category] = [
-        Category(name: "Watches", image: "watches"),
+        Category(name: "Watch", image: "watches"),
         Category(name: "Shoes", image: "shoes"),
-        Category(name: "Clothings", image: "clothings"),
+        Category(name: "Clothing", image: "clothing"),
         Category(name: "Bags", image: "bags"),
         Category(name: "Accessories", image: "accessories"),
-        ]
+    ]
 
     private let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
 
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        cv.backgroundColor = .systemGreen
         cv.translatesAutoresizingMaskIntoConstraints = false
         return cv
     }()
     
     
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        title = "Category"
+    private func setupNavBar() {
+        navigationItem.title = "Category"
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationBar.isTranslucent = true
+        navigationController?.navigationBar.barStyle = .black
         
         let searchController = UISearchController()
         navigationItem.searchController = searchController
-        navigationItem.hidesSearchBarWhenScrolling = true
+        navigationItem.hidesSearchBarWhenScrolling = false
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        setupNavBar()
         setupCollectionView()
         setupViews()
     }
@@ -54,13 +58,15 @@ class CategoryController: UIViewController {
     
     private func setupViews() {
         view.addSubview(collectionView)
-        collectionView.backgroundColor = .white
+        
+        view.backgroundColor = .black
+        collectionView.backgroundColor = .clear
         
         NSLayoutConstraint.activate([
-            collectionView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             collectionView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+            collectionView.topAnchor.constraint(equalTo: view.topAnchor),
+            collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }
 
