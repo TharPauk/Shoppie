@@ -62,12 +62,7 @@ class CategoryController: UIViewController {
         view.backgroundColor = .black
         collectionView.backgroundColor = .clear
         
-        NSLayoutConstraint.activate([
-            collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            collectionView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            collectionView.topAnchor.constraint(equalTo: view.topAnchor),
-            collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-        ])
+        collectionView.pin(to: view)
     }
 
 }
