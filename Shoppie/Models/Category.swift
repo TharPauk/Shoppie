@@ -6,7 +6,7 @@
 //  Copyright © 2020 Myanmy. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 struct Category: Codable {
     var name: String

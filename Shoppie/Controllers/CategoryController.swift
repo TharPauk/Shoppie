@@ -34,8 +34,10 @@ class CategoryController: UIViewController {
     private func setupNavBar() {
         navigationItem.title = "Category"
         navigationController?.navigationBar.prefersLargeTitles = true
-        navigationController?.navigationBar.isTranslucent = true
-        navigationController?.navigationBar.barStyle = .black
+        navigationController?.navigationBar.isTranslucent = false
+        navigationController?.navigationBar.barTintColor = .white
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
+        navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
         
         let searchController = UISearchController()
         navigationItem.searchController = searchController
@@ -59,7 +61,7 @@ class CategoryController: UIViewController {
     private func setupViews() {
         view.addSubview(collectionView)
         
-        view.backgroundColor = .black
+        view.backgroundColor = .white
         collectionView.backgroundColor = .clear
         
         collectionView.pin(to: view)

@@ -22,7 +22,7 @@ class TabBarController: UITabBarController {
  
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .black
+        view.backgroundColor = .white
         
         setupTabBarShadow()
         setupTabBar()
@@ -34,14 +34,18 @@ class TabBarController: UITabBarController {
         tabBar.layer.shadowRadius = 8
         tabBar.layer.shadowColor = UIColor.black.cgColor
         tabBar.layer.masksToBounds = false
-        tabBar.barStyle = .black
+        tabBar.barTintColor = .white
+//        tabBar.barStyle = .black
         tabBar.isTranslucent = true
       
     }
     
     private func setupTabBar() {
-        tabBar.unselectedItemTintColor = .systemGray
-        tabBar.tintColor = .systemBlue
+//        tabBar.unselectedItemTintColor = .systemGray
+//        tabBar.tintColor = .systemBlue
+        
+        tabBar.unselectedItemTintColor = #colorLiteral(red: 0.7411764706, green: 0.7411764706, blue: 0.7411764706, alpha: 1)
+        tabBar.tintColor = .black
         
         let layout = UICollectionViewFlowLayout()
         

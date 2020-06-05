@@ -10,7 +10,7 @@ import UIKit
 
 class CategoryCell: BaseCell {
     
-    static let reuseIdentifier = String(describing: CategoryCell.self)
+    static var reuseIdentifier = String(describing: CategoryCell.self)
     
     let nameLabel: UILabel = {
         let lbl = UILabel()
@@ -18,6 +18,7 @@ class CategoryCell: BaseCell {
         lbl.numberOfLines = 1
         lbl.font = UIFont.systemFont(ofSize: 24, weight: .regular)
         lbl.textColor = .white
+        lbl.backgroundColor = .clear
         lbl.translatesAutoresizingMaskIntoConstraints = false
         return lbl
     }()

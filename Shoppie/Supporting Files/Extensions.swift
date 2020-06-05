@@ -8,7 +8,15 @@
 
 import UIKit
 
+extension UIColor {
+    func rgb(red: CGFloat, green: CGFloat, blue: CGFloat) -> UIColor {
+        UIColor.init(red: red/255, green: green/255, blue: blue/255, alpha: 1.0)
+    }
+}
+
+
 extension UIView {
+    
     func constraintsWithVisualFormat(format: String, views: UIView...) {
         var viewsDict = [String: UIView]()
         for (index, view) in views.enumerated() {

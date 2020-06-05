@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D90CDCEE248A26B000198F76 /* EventSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90CDCED248A26B000198F76 /* EventSectionCell.swift */; };
+		D9257DA8248A3FEF00EB119B /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9257DA7248A3FEF00EB119B /* Item.swift */; };
+		D9257DAA248A4AC600EB119B /* PromotedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9257DA9248A4AC600EB119B /* PromotedItem.swift */; };
+		D9458CC224894C3800EA3F4A /* NewArrivalItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9458CC124894C3800EA3F4A /* NewArrivalItemCell.swift */; };
 		D9637F2324864A010007A0E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9637F2224864A010007A0E7 /* AppDelegate.swift */; };
 		D9637F2524864A010007A0E7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9637F2424864A010007A0E7 /* SceneDelegate.swift */; };
 		D9637F2C24864A060007A0E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9637F2B24864A060007A0E7 /* Assets.xcassets */; };
@@ -14,9 +18,10 @@
 		D9637F3A24864E650007A0E7 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9637F3924864E650007A0E7 /* TabBarController.swift */; };
 		D9637F3C248652440007A0E7 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9637F3B248652440007A0E7 /* HomeController.swift */; };
 		D9637F3E24865C8B0007A0E7 /* CategoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9637F3D24865C8B0007A0E7 /* CategoryController.swift */; };
-		D9C69C972488C7B100A5C8A4 /* HeroImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C69C962488C7B100A5C8A4 /* HeroImageCell.swift */; };
+		D9C69C972488C7B100A5C8A4 /* FirstSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C69C962488C7B100A5C8A4 /* FirstSectionCell.swift */; };
 		D9C69C992488C7FC00A5C8A4 /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C69C982488C7FC00A5C8A4 /* BaseCell.swift */; };
 		D9C69C9C2488CA4100A5C8A4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C69C9B2488CA4100A5C8A4 /* Extensions.swift */; };
+		D9C69C9E2488D3FF00A5C8A4 /* OddSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C69C9D2488D3FF00A5C8A4 /* OddSectionCell.swift */; };
 		D9F5364124867D8900BBF0DB /* AccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F5364024867D8900BBF0DB /* AccountController.swift */; };
 		D9F5364324867DBB00BBF0DB /* BagController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F5364224867DBB00BBF0DB /* BagController.swift */; };
 		D9F536472486832A00BBF0DB /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F536462486832A00BBF0DB /* CategoryCell.swift */; };
@@ -25,6 +30,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D90CDCED248A26B000198F76 /* EventSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventSectionCell.swift; sourceTree = "<group>"; };
+		D9257DA7248A3FEF00EB119B /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		D9257DA9248A4AC600EB119B /* PromotedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromotedItem.swift; sourceTree = "<group>"; };
+		D9458CC124894C3800EA3F4A /* NewArrivalItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewArrivalItemCell.swift; sourceTree = "<group>"; };
 		D9637F1F24864A010007A0E7 /* Shoppie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shoppie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9637F2224864A010007A0E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9637F2424864A010007A0E7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,9 +43,10 @@
 		D9637F3924864E650007A0E7 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		D9637F3B248652440007A0E7 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		D9637F3D24865C8B0007A0E7 /* CategoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryController.swift; sourceTree = "<group>"; };
-		D9C69C962488C7B100A5C8A4 /* HeroImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroImageCell.swift; sourceTree = "<group>"; };
+		D9C69C962488C7B100A5C8A4 /* FirstSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSectionCell.swift; sourceTree = "<group>"; };
 		D9C69C982488C7FC00A5C8A4 /* BaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
 		D9C69C9B2488CA4100A5C8A4 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		D9C69C9D2488D3FF00A5C8A4 /* OddSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OddSectionCell.swift; sourceTree = "<group>"; };
 		D9F5364024867D8900BBF0DB /* AccountController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountController.swift; sourceTree = "<group>"; };
 		D9F5364224867DBB00BBF0DB /* BagController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagController.swift; sourceTree = "<group>"; };
 		D9F536462486832A00BBF0DB /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
@@ -102,7 +112,10 @@
 		D9C69C9A2488C91D00A5C8A4 /* Home Screen Cells */ = {
 			isa = PBXGroup;
 			children = (
-				D9C69C962488C7B100A5C8A4 /* HeroImageCell.swift */,
+				D9C69C962488C7B100A5C8A4 /* FirstSectionCell.swift */,
+				D9C69C9D2488D3FF00A5C8A4 /* OddSectionCell.swift */,
+				D9458CC124894C3800EA3F4A /* NewArrivalItemCell.swift */,
+				D90CDCED248A26B000198F76 /* EventSectionCell.swift */,
 			);
 			path = "Home Screen Cells";
 			sourceTree = "<group>";
@@ -138,6 +151,8 @@
 			isa = PBXGroup;
 			children = (
 				D9F5364E248688B600BBF0DB /* Category.swift */,
+				D9257DA7248A3FEF00EB119B /* Item.swift */,
+				D9257DA9248A4AC600EB119B /* PromotedItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -213,9 +228,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9637F3C248652440007A0E7 /* HomeController.swift in Sources */,
+				D90CDCEE248A26B000198F76 /* EventSectionCell.swift in Sources */,
+				D9257DA8248A3FEF00EB119B /* Item.swift in Sources */,
 				D9F5364F248688B600BBF0DB /* Category.swift in Sources */,
-				D9C69C972488C7B100A5C8A4 /* HeroImageCell.swift in Sources */,
+				D9C69C972488C7B100A5C8A4 /* FirstSectionCell.swift in Sources */,
 				D9637F3E24865C8B0007A0E7 /* CategoryController.swift in Sources */,
+				D9C69C9E2488D3FF00A5C8A4 /* OddSectionCell.swift in Sources */,
 				D9C69C992488C7FC00A5C8A4 /* BaseCell.swift in Sources */,
 				D9637F3A24864E650007A0E7 /* TabBarController.swift in Sources */,
 				D9F536472486832A00BBF0DB /* CategoryCell.swift in Sources */,
@@ -223,7 +241,9 @@
 				D9C69C9C2488CA4100A5C8A4 /* Extensions.swift in Sources */,
 				D9637F2324864A010007A0E7 /* AppDelegate.swift in Sources */,
 				D9F5364C2486859500BBF0DB /* CacheImageView.swift in Sources */,
+				D9257DAA248A4AC600EB119B /* PromotedItem.swift in Sources */,
 				D9637F2524864A010007A0E7 /* SceneDelegate.swift in Sources */,
+				D9458CC224894C3800EA3F4A /* NewArrivalItemCell.swift in Sources */,
 				D9F5364324867DBB00BBF0DB /* BagController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
