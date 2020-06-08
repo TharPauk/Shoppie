@@ -9,9 +9,13 @@
 
 import UIKit
 
-
+protocol OddSectionCellDelegate {
+    func didTapProductCell()
+}
 
 class OddSectionCell: BaseCell {
+    
+    var delegate: OddSectionCellDelegate?
     
     var itemsArray: [Item]?
     
@@ -63,6 +67,7 @@ class OddSectionCell: BaseCell {
         setupBgViewConstraints()
         setupCaptionLabelConstraints()
         setupCollectionViewConstraints()
+
         
     }
     
@@ -122,6 +127,10 @@ extension OddSectionCell: UICollectionViewDelegate, UICollectionViewDataSource, 
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         CGSize(width: 195, height: 262)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.didTapProductCell()
     }
 
 }

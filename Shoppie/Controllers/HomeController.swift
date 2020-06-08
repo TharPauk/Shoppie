@@ -25,11 +25,29 @@ class HomeController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.navigationBar.isHidden = true
         self.modalPresentationStyle = .fullScreen
         setupCollectionViewLayout()
         setupCollectionView()
         setupViews()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        navigationController?.navigationBar.isHidden = true
+        setupCollectionViewTopInset()
+        view.layoutIfNeeded()
+    }
+    
+    fileprivate func setupCollectionViewTopInset() {
+        // remove contentInset not to cover with status bar in iPhone with nortch
+        var top: CGFloat
+        if #available(iOS 11.0, *) {
+            top = UIApplication.shared.keyWindow?.safeAreaInsets.top ?? 0
+        } else {
+            top = UIApplication.shared.statusBarFrame.height
+        }
+        collectionView.contentInset.top = -top
     }
     
     private func setupCollectionView() {
@@ -39,14 +57,7 @@ class HomeController: UICollectionViewController {
         collectionView.backgroundColor = .clear
         
         
-        // remove contentInset not to cover with status bar in iPhone with nortch
-        var top: CGFloat
-        if #available(iOS 11.0, *) {
-            top = UIApplication.shared.keyWindow?.safeAreaInsets.top ?? 0
-        } else {
-            top = UIApplication.shared.statusBarFrame.height
-        }
-        collectionView.contentInset.top = -top
+        setupCollectionViewTopInset()
 
         collectionView.register(FirstSectionCell.self, forCellWithReuseIdentifier: FirstSectionCell.reuseIdentifier)
         collectionView.register(OddSectionCell.self, forCellWithReuseIdentifier: OddSectionCell.reuseIdentifier)
@@ -94,6 +105,7 @@ extension HomeController: UICollectionViewDelegateFlowLayout{
                 cell.itemsArray = justForYouItems
                 cell.captionLabel.text = "Just For You".uppercased()
             }
+            cell.delegate = self
             return cell
         case 2,4:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: EventSectionCell.reuseIdentifier, for: indexPath) as? EventSectionCell else { return UICollectionViewCell() }
@@ -128,6 +140,14 @@ extension HomeController: UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         getRelatedCellSize(indexPath: indexPath)
+    }
+    
+    
+}
+
+extension HomeController: OddSectionCellDelegate {
+    func didTapProductCell() {
+        navigationController?.pushViewController(ProductDetailController(), animated: true)
     }
     
     
