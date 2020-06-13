@@ -33,15 +33,27 @@ class CategoryController: UIViewController {
     
     private func setupNavBar() {
         navigationItem.title = "Category"
-        navigationController?.navigationBar.prefersLargeTitles = true
-        navigationController?.navigationBar.isTranslucent = false
-        navigationController?.navigationBar.barTintColor = .white
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
-        navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
+        
+        if let navBar = navigationController?.navigationBar {
+            navBar.prefersLargeTitles = true
+            navBar.isTranslucent = true
+            navBar.barTintColor = .white
+            
+            navBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
+            navBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
+        }
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "add_to_bag"), style: .plain, target: self, action: #selector(hanldeBagButtonPressed))
         
         let searchController = UISearchController()
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
+        
+    }
+    
+    @objc private func hanldeBagButtonPressed() {
+        let bagController = BagController()
+        present(bagController, animated: true)
     }
     
     override func viewDidLoad() {
@@ -59,6 +71,8 @@ class CategoryController: UIViewController {
     }
     
     private func setupViews() {
+        tabBarController?.tabBar.isHidden = false
+        
         view.addSubview(collectionView)
         
         view.backgroundColor = .white

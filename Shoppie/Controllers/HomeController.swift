@@ -10,6 +10,9 @@ import UIKit
 
 class HomeController: UICollectionViewController {
     
+    let cellHeights: [CGFloat] = [573, 347, 312, 397, 312]
+    
+    
     var newArrivalItems = [
         Item(itemName: "Solid Color Shirt", imageName: "2", itemPrice: "35.90"),
         Item(itemName: "Textured Plain Shirt", imageName: "3", itemPrice: "43.90")
@@ -34,21 +37,30 @@ class HomeController: UICollectionViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        navigationController?.navigationBar.isHidden = true
-        setupCollectionViewTopInset()
+        navigationItem.title = "Home"
+        
+        if let navBar = navigationController?.navigationBar {
+            navBar.prefersLargeTitles = true
+            navBar.isTranslucent = true
+            navBar.barTintColor = .white
+            
+            navBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
+            navBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
+            navBar.isHidden = false
+        }
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "add_to_bag"), style: .plain, target: self, action: #selector(hanldeBagButtonPressed))
+        tabBarController?.tabBar.isHidden = false
         view.layoutIfNeeded()
     }
     
-    fileprivate func setupCollectionViewTopInset() {
-        // remove contentInset not to cover with status bar in iPhone with nortch
-        var top: CGFloat
-        if #available(iOS 11.0, *) {
-            top = UIApplication.shared.keyWindow?.safeAreaInsets.top ?? 0
-        } else {
-            top = UIApplication.shared.statusBarFrame.height
-        }
-        collectionView.contentInset.top = -top
+    
+    
+    @objc private func hanldeBagButtonPressed() {
+        let bagController = BagController()
+        present(bagController, animated: true)
     }
+    
     
     private func setupCollectionView() {
         collectionView.translatesAutoresizingMaskIntoConstraints = false
@@ -56,9 +68,6 @@ class HomeController: UICollectionViewController {
         collectionView.dataSource = self
         collectionView.backgroundColor = .clear
         
-        
-        setupCollectionViewTopInset()
-
         collectionView.register(FirstSectionCell.self, forCellWithReuseIdentifier: FirstSectionCell.reuseIdentifier)
         collectionView.register(OddSectionCell.self, forCellWithReuseIdentifier: OddSectionCell.reuseIdentifier)
         collectionView.register(EventSectionCell.self, forCellWithReuseIdentifier: EventSectionCell.reuseIdentifier)
@@ -120,18 +129,7 @@ extension HomeController: UICollectionViewDelegateFlowLayout{
     }
     
     private func getRelatedCellSize(indexPath: IndexPath) -> CGSize {
-        switch indexPath.section {
-        case 0:
-            return CGSize(width: view.frame.width, height: 573)
-        case 1:
-            return CGSize(width: view.frame.width, height: 347)
-        case 3:
-            return CGSize(width: view.frame.width, height: 397)
-        case 2,4:
-            return CGSize(width: view.frame.width, height: 312)
-        default:
-            return CGSize(width: view.frame.width, height: 347)
-        }
+        CGSize(width: view.frame.width, height: cellHeights[indexPath.section])
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

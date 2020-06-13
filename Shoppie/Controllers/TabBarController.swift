@@ -35,15 +35,11 @@ class TabBarController: UITabBarController {
         tabBar.layer.shadowColor = UIColor.black.cgColor
         tabBar.layer.masksToBounds = false
         tabBar.barTintColor = .white
-//        tabBar.barStyle = .black
         tabBar.isTranslucent = true
       
     }
     
     private func setupTabBar() {
-//        tabBar.unselectedItemTintColor = .systemGray
-//        tabBar.tintColor = .systemBlue
-        
         tabBar.unselectedItemTintColor = #colorLiteral(red: 0.7411764706, green: 0.7411764706, blue: 0.7411764706, alpha: 1)
         tabBar.tintColor = .black
         
@@ -52,15 +48,15 @@ class TabBarController: UITabBarController {
         let controllers: [Controller] = [
             Controller(title: "Home", viewController: HomeController(collectionViewLayout: layout)),
             Controller(title: "Category", viewController: CategoryController()),
-            Controller(title: "Account", viewController: AccountController()),
-            Controller(title: "Bag", viewController: BagController())
+            Controller(title: "Account", viewController: AccountController())
         ]
-   
+        
         viewControllers = controllers.map { self.setupTabBarControllers(controller: $0) }
      }
     
     private func setupTabBarControllers(controller: Controller) -> UINavigationController {
         let navController = UINavigationController(rootViewController: controller.viewController )
+
         navController.tabBarItem = UITabBarItem(title: controller.title, image: UIImage(named: "\(controller.title.lowercased())_icon"), selectedImage: nil)
         return navController
     }

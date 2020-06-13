@@ -28,6 +28,7 @@
 		D9F536472486832A00BBF0DB /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F536462486832A00BBF0DB /* CategoryCell.swift */; };
 		D9F5364C2486859500BBF0DB /* CacheImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F5364B2486859500BBF0DB /* CacheImageView.swift */; };
 		D9F5364F248688B600BBF0DB /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F5364E248688B600BBF0DB /* Category.swift */; };
+		D9FE767E248E6B90007D4393 /* BagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FE767D248E6B90007D4393 /* BagCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		D9F536462486832A00BBF0DB /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		D9F5364B2486859500BBF0DB /* CacheImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheImageView.swift; sourceTree = "<group>"; };
 		D9F5364E248688B600BBF0DB /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		D9FE767D248E6B90007D4393 /* BagCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BagCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 				D9C69C9A2488C91D00A5C8A4 /* Home Screen Cells */,
 				D9F536462486832A00BBF0DB /* CategoryCell.swift */,
 				D9C69C982488C7FC00A5C8A4 /* BaseCell.swift */,
+				D9FE767D248E6B90007D4393 /* BagCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 				D9F5364F248688B600BBF0DB /* Category.swift in Sources */,
 				D9C69C972488C7B100A5C8A4 /* FirstSectionCell.swift in Sources */,
 				D9637F3E24865C8B0007A0E7 /* CategoryController.swift in Sources */,
+				D9FE767E248E6B90007D4393 /* BagCell.swift in Sources */,
 				D9C69C9E2488D3FF00A5C8A4 /* OddSectionCell.swift in Sources */,
 				D9C69C992488C7FC00A5C8A4 /* BaseCell.swift in Sources */,
 				D9637F3A24864E650007A0E7 /* TabBarController.swift in Sources */,

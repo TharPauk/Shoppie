@@ -163,7 +163,6 @@ class ProductDetailController: UIViewController {
             btn.heightAnchor.constraint(equalToConstant: 20).isActive = true
             btn.layer.cornerRadius = 10
             self.sizeOptionStackView.addArrangedSubview(btn)
-            
         }
         if let btn = sizeOptionStackView.subviews[2] as? UIButton {
             btn.setAttributedTitle(NSAttributedString(string: sizes[2] ?? "M", attributes: [NSAttributedString.Key.foregroundColor : #colorLiteral(red: 0.2, green: 0.2, blue: 0.2, alpha: 1), NSAttributedString.Key.font: UIFont.systemFont(ofSize: 12, weight: .semibold)]), for: .normal)
@@ -183,59 +182,107 @@ class ProductDetailController: UIViewController {
         productInfoView.addSubview(colorCircle)
         productInfoView.addSubview(productDescription)
         productInfoView.addSubview(addToBagButton)
+ 
         
+        setProductImageViewConstraints()
+        setProductInfoViewConstraints()
+        setProductTitleConstraints()
+        setProductPriceConstraints()
+        setColorLabelConstraints()
+        
+        setColorCircleContraints()
+        setSizeLabelConstraints()
+        setSizeOptionStackViewConstraints()
+        setProductDescriptionConstraints()
+        setAddToBagButtonConstraints()
+    }
+    
+    private func setProductImageViewConstraints() {
         NSLayoutConstraint.activate([
-            
             productImageView.topAnchor.constraint(equalTo: view.topAnchor),
             productImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             productImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            productInfoView.bottomAnchor.constraint(greaterThanOrEqualToSystemSpacingBelow: productInfoView.topAnchor, multiplier: 30),
-            
+            productInfoView.bottomAnchor.constraint(greaterThanOrEqualToSystemSpacingBelow: productInfoView.topAnchor, multiplier: 30)
+        ])
+    }
+    
+    private func setProductInfoViewConstraints() {
+        NSLayoutConstraint.activate([
             productInfoView.widthAnchor.constraint(equalTo: view.widthAnchor),
             productInfoView.heightAnchor.constraint(equalToConstant: 326),
             productInfoView.leftAnchor.constraint(equalTo: view.leftAnchor),
-            productInfoView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            
+            productInfoView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
+    }
+    
+    private func setProductTitleConstraints() {
+        NSLayoutConstraint.activate([
             productTitle.leftAnchor.constraint(equalTo: productInfoView.leftAnchor, constant: 17),
             productTitle.topAnchor.constraint(equalTo: productInfoView.topAnchor, constant: 23),
             productTitle.rightAnchor.constraint(equalTo: productPrice.leftAnchor, constant: -5),
-            productTitle.heightAnchor.constraint(equalToConstant: 20),
-            
+            productTitle.heightAnchor.constraint(equalToConstant: 20)
+        ])
+    }
+    
+    private func setProductPriceConstraints() {
+        NSLayoutConstraint.activate([
             productPrice.widthAnchor.constraint(equalToConstant: 100),
             productPrice.centerYAnchor.constraint(equalTo: productTitle.centerYAnchor),
             productPrice.rightAnchor.constraint(equalTo: productInfoView.rightAnchor, constant: -16),
-            productPrice.heightAnchor.constraint(equalTo: productTitle.heightAnchor),
-            
+            productPrice.heightAnchor.constraint(equalTo: productTitle.heightAnchor)
+        ])
+    }
+    
+    private func setColorLabelConstraints() {
+        NSLayoutConstraint.activate([
             colorLabel.leftAnchor.constraint(equalTo: productInfoView.leftAnchor, constant: 17),
             colorLabel.widthAnchor.constraint(equalToConstant: 60),
             colorLabel.heightAnchor.constraint(equalToConstant: 14),
-            colorLabel.topAnchor.constraint(equalTo: productInfoView.topAnchor, constant: 64),
-            
+            colorLabel.topAnchor.constraint(equalTo: productInfoView.topAnchor, constant: 64)
+        ])
+    }
+   
+    private func setColorCircleContraints() {
+        NSLayoutConstraint.activate([
             colorCircle.leftAnchor.constraint(equalTo: colorLabel.leftAnchor),
             colorCircle.topAnchor.constraint(equalTo: colorLabel.bottomAnchor, constant: 3),
             colorCircle.widthAnchor.constraint(equalToConstant: 21),
-            colorCircle.heightAnchor.constraint(equalToConstant: 21),
-            
+            colorCircle.heightAnchor.constraint(equalToConstant: 21)
+        ])
+    }
+    
+    private func setSizeLabelConstraints() {
+        NSLayoutConstraint.activate([
             sizeLabel.topAnchor.constraint(equalTo: productInfoView.topAnchor, constant: 64),
             sizeLabel.leftAnchor.constraint(equalTo: sizeOptionStackView.leftAnchor, constant: 0),
             sizeLabel.centerYAnchor.constraint(equalTo: colorLabel.centerYAnchor),
-            sizeLabel.widthAnchor.constraint(lessThanOrEqualToConstant: 100),
-            
+            sizeLabel.widthAnchor.constraint(lessThanOrEqualToConstant: 100)
+        ])
+    }
+    
+    private func setSizeOptionStackViewConstraints() {
+        NSLayoutConstraint.activate([
             sizeOptionStackView.rightAnchor.constraint(equalTo: productInfoView.rightAnchor, constant: -16),
             sizeOptionStackView.topAnchor.constraint(equalTo: sizeLabel.bottomAnchor, constant: 6),
             sizeOptionStackView.widthAnchor.constraint(lessThanOrEqualToConstant: 200),
-            sizeOptionStackView.heightAnchor.constraint(lessThanOrEqualToConstant: 100),
-            
+            sizeOptionStackView.heightAnchor.constraint(lessThanOrEqualToConstant: 100)
+        ])
+    }
+    private func setProductDescriptionConstraints() {
+        NSLayoutConstraint.activate([
             productDescription.leftAnchor.constraint(equalTo: productInfoView.leftAnchor, constant: 16),
             productDescription.rightAnchor.constraint(equalTo: productInfoView.rightAnchor, constant: -16),
             productDescription.topAnchor.constraint(equalTo: productInfoView.topAnchor, constant: 118),
-            productDescription.bottomAnchor.constraint(lessThanOrEqualTo: addToBagButton.topAnchor, constant: -16),
-            
+            productDescription.bottomAnchor.constraint(lessThanOrEqualTo: addToBagButton.topAnchor, constant: -16)
+        ])
+    }
+    
+    private func setAddToBagButtonConstraints() {
+        NSLayoutConstraint.activate([
             addToBagButton.leftAnchor.constraint(equalTo: productInfoView.leftAnchor, constant: 16),
             addToBagButton.rightAnchor.constraint(equalTo: productInfoView.rightAnchor, constant: -16),
             addToBagButton.heightAnchor.constraint(equalToConstant: 50),
             addToBagButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -10)
-            
         ])
     }
 }
