@@ -19,6 +19,8 @@
 		D9637F3C248652440007A0E7 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9637F3B248652440007A0E7 /* HomeController.swift */; };
 		D9637F3E24865C8B0007A0E7 /* CategoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9637F3D24865C8B0007A0E7 /* CategoryController.swift */; };
 		D9657359248DFA8D003E1281 /* ProductDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9657358248DFA8D003E1281 /* ProductDetailController.swift */; };
+		D9B76A9D24966D6000E259F1 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B76A9C24966D6000E259F1 /* AuthService.swift */; };
+		D9B76A9F249670EF00E259F1 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B76A9E249670EF00E259F1 /* LoginController.swift */; };
 		D9C69C972488C7B100A5C8A4 /* FirstSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C69C962488C7B100A5C8A4 /* FirstSectionCell.swift */; };
 		D9C69C992488C7FC00A5C8A4 /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C69C982488C7FC00A5C8A4 /* BaseCell.swift */; };
 		D9C69C9C2488CA4100A5C8A4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C69C9B2488CA4100A5C8A4 /* Extensions.swift */; };
@@ -46,6 +48,8 @@
 		D9637F3B248652440007A0E7 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		D9637F3D24865C8B0007A0E7 /* CategoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryController.swift; sourceTree = "<group>"; };
 		D9657358248DFA8D003E1281 /* ProductDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailController.swift; sourceTree = "<group>"; };
+		D9B76A9C24966D6000E259F1 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		D9B76A9E249670EF00E259F1 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		D9C69C962488C7B100A5C8A4 /* FirstSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSectionCell.swift; sourceTree = "<group>"; };
 		D9C69C982488C7FC00A5C8A4 /* BaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
 		D9C69C9B2488CA4100A5C8A4 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -88,6 +92,7 @@
 		D9637F2124864A010007A0E7 /* Shoppie */ = {
 			isa = PBXGroup;
 			children = (
+				D9B76A9924966D0A00E259F1 /* Services */,
 				D9F5364D248688A300BBF0DB /* Models */,
 				D9F536482486853800BBF0DB /* Supporting Files */,
 				D9F536442486820300BBF0DB /* Views */,
@@ -110,8 +115,17 @@
 				D9F5364024867D8900BBF0DB /* AccountController.swift */,
 				D9F5364224867DBB00BBF0DB /* BagController.swift */,
 				D9657358248DFA8D003E1281 /* ProductDetailController.swift */,
+				D9B76A9E249670EF00E259F1 /* LoginController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D9B76A9924966D0A00E259F1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D9B76A9C24966D6000E259F1 /* AuthService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		D9C69C9A2488C91D00A5C8A4 /* Home Screen Cells */ = {
@@ -239,10 +253,12 @@
 				D9F5364F248688B600BBF0DB /* Category.swift in Sources */,
 				D9C69C972488C7B100A5C8A4 /* FirstSectionCell.swift in Sources */,
 				D9637F3E24865C8B0007A0E7 /* CategoryController.swift in Sources */,
+				D9B76A9D24966D6000E259F1 /* AuthService.swift in Sources */,
 				D9FE767E248E6B90007D4393 /* BagCell.swift in Sources */,
 				D9C69C9E2488D3FF00A5C8A4 /* OddSectionCell.swift in Sources */,
 				D9C69C992488C7FC00A5C8A4 /* BaseCell.swift in Sources */,
 				D9637F3A24864E650007A0E7 /* TabBarController.swift in Sources */,
+				D9B76A9F249670EF00E259F1 /* LoginController.swift in Sources */,
 				D9F536472486832A00BBF0DB /* CategoryCell.swift in Sources */,
 				D9F5364124867D8900BBF0DB /* AccountController.swift in Sources */,
 				D9C69C9C2488CA4100A5C8A4 /* Extensions.swift in Sources */,

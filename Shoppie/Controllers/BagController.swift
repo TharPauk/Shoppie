@@ -64,6 +64,7 @@ class BagController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
+        tableView.separatorStyle = .none
         tableView.rowHeight = 144
         tableView.register(BagCell.self, forCellReuseIdentifier: BagCell.reuseIdentifier)
     }

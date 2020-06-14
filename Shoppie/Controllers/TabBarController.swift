@@ -18,7 +18,7 @@ fileprivate struct Controller {
     }
 }
 
-class TabBarController: UITabBarController {
+class TabBarController: UITabBarController, UINavigationControllerDelegate {
  
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +26,15 @@ class TabBarController: UITabBarController {
         
         setupTabBarShadow()
         setupTabBar()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if !AuthService.instance.isLoggedIn {
+            let loginController = LoginController()
+            loginController.modalPresentationStyle = .overFullScreen
+            present(loginController, animated: true)
+        }
     }
     
     fileprivate func setupTabBarShadow() {
