@@ -88,7 +88,7 @@ class ProductDetailController: UIViewController {
         let sv = UIStackView(frame: .zero)
         sv.spacing = 5
         sv.axis = .horizontal
-        sv.backgroundColor = .darkGray
+        sv.backgroundColor = .clear
         sv.distribution = .equalSpacing
         sv.translatesAutoresizingMaskIntoConstraints = false
         return sv
